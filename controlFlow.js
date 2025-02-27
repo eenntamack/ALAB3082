@@ -11,54 +11,54 @@ let extraSpace = 0;
 
 week += 1;
 totalArea = (initialAmount * plantArea) * ( 2 ** week ); 
+console.log('total area and container area below'); 
 console.log(totalArea);
 console.log(area);
 
 if(totalArea > area){
-      console.log(`The total plant area exceeds the containter with ${totalArea}sq m , so the plants must be ` + 'Pruned');
+      console.log(`The total plant area for 1 week exceeds the containter with ${totalArea}sq m , so the plants must be ` + 'Pruned');
 }
 else if(totalArea >= (0.5 * area) && week <= (0.8 * area))
 {
-    console.log(`The total plant area is ${totalArea}sq m , so the plants must be ` + 'Monitored');
+    console.log(`The total plant area is ${totalArea}sq m for week 1, so the plants must be ` + 'Monitored');
 }else if(totalArea < (0.5 * area))
 {
-    console.log(`The total plant area is ${totalArea}sq m , so more plants must be ` + 'Planted');
+    console.log(`The total plant area is ${totalArea}sq m for week 1, so more plants must be ` + 'Planted');
 }
 
 //handling for 2 weeks
 
 week += 1;
-totalArea = (initialAmount * plantArea) * ( 2 ** week ); 
-console.log(totalArea);
-console.log(area);
+totalArea = (initialAmount * plantArea) * ( 2 ** week );
+
+
 
 if(totalArea > area){
-      console.log(`The total plant area exceeds the containter with ${totalArea}sq m , so the plants must be ` + 'Pruned');
+      console.log(`The total plant area for 2 weeks exceeds the containter with ${totalArea}sq m , so the plants must be ` + 'Pruned');
 }
 else if(totalArea >= (0.5 * area) && week <= (0.8 * area))
 {
-    console.log(`The total plant area is ${totalArea}sq m , so the plants must be ` + 'Monitored');
+    console.log(`The total plant area is ${totalArea}sq m for week 2, so the plants must be ` + 'Monitored');
 }else if(totalArea < (0.5 * area))
 {
-    console.log(`The total plant area is ${totalArea}sq m , so more plants must be ` + 'Planted');
+    console.log(`The total plant area is ${totalArea}sq m for week 2, so more plants must be ` + 'Planted');
 }
 
 //handling for 3 weeks
 
 week += 1;
 totalArea = (initialAmount * plantArea) * ( 2 ** week ); 
-console.log(totalArea);
-console.log(area);
+
 
 if(totalArea > area){
-      console.log(`The total plant area exceeds the containter with ${totalArea}sq m , so the plants must be ` + 'Pruned');
+      console.log(`The total plant area for 3 weeks exceeds the containter with ${totalArea}sq m , so the plants must be ` + 'Pruned');
 }
 else if(totalArea >= (0.5 * area) && week <= (0.8 * area))
 {
-    console.log(`The total plant area is ${totalArea}sq m , so the plants must be ` + 'Monitored');
+    console.log(`The total plant area is ${totalArea}sq m for week 3, so the plants must be ` + 'Monitored');
 }else if(totalArea < (0.5 * area))
 {
-    console.log(`The total plant area is ${totalArea}sq m , so more plants must be ` + 'Planted');
+    console.log(`The total plant area is ${totalArea}sq m for week 3, so more plants must be ` + 'Planted');
 }
 
 
@@ -82,7 +82,7 @@ try{
     if(initialAmount < 20){
         console.log('lets start planting');
     }else{
-        throw "Too Many Plants";
+        throw "The current amount of plants exceed the expected amount (20)";
     }
 }catch(error){
     console.log(error);
